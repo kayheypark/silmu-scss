@@ -1,0 +1,127 @@
+﻿%ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */ 
+}
+
+//flex
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+    &-center-start {
+        @extend %flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &-center-end {
+        @extend %flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &-center-center {
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-center-between {
+        @extend %flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-start-start {
+        @extend %flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &-start-end {
+        @extend %flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    &-start-center {
+        @extend %flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &-start-between {
+        @extend %flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &-end-start {
+        @extend %flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    &-end-end {
+        @extend %flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    &-end-center {
+        @extend %flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    &-end-between {
+        @extend %flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &-between-start {
+        @extend %flex;
+        align-items: space-between;
+        justify-content: flex-start;
+    }
+    &-between-end {
+        @extend %flex;
+        align-items: space-between;
+        justify-content: flex-end;
+    }
+    &-between-center {
+        @extend %flex;
+        align-items: space-between;
+        justify-content: center;
+    }
+    &-between-between {
+        @extend %flex;
+        align-items: space-between;
+        justify-content: space-between;
+    }
+}
+
+//background
+%background {
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &-cover {
+        @extend %background;
+        background-size: cover;
+    }
+
+    &-contain {
+        @extend %background;
+        background-size: contain;
+    }
+
+}
+
+//clearfix
+%clearfix {
+    &:after {
+        content: ''; display: block; clear: both;
+    }
+}
+
+//position-center
+%pc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

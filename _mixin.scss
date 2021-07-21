@@ -1,0 +1,53 @@
+﻿//grid
+@mixin grid($columncount, $cg, $rg) {
+    display: grid;
+    grid-template-columns: repeat($columncount, 1fr);
+    column-gap: $cg;
+    row-gap: $rg;
+
+    & > * {
+        display: block;
+        width: 100%;
+    }
+};
+
+
+//spacing
+@mixin py($val) {
+    padding-top: $val;
+    padding-bottom: $val;
+};
+
+@mixin px($val) {
+    padding-left: $val;
+    padding-right: $val;
+};
+
+@mixin my($val) {
+    margin-top: $val;
+    margin-top: $val;
+};
+
+@mixin mx($val) {
+    margin-left: $val;
+    margin-right: $val;
+};
+
+@mixin gapx($val) {
+    column-gap: $val;
+};
+
+@mixin gapy($val) {
+    row-gap: $val;
+};
+
+//ellipsis
+@mixin es($val) {
+    @if $val == 1 {
+        @extend %ellipsis;
+        -webkit-line-clamp: 1;
+    } @else if $val > 1 {
+        @extend %ellipsis;
+        -webkit-line-clamp: $val;
+    }
+};
